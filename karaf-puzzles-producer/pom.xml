@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	example producer pom
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <artifactId>karaf-puzzles-parent</artifactId>
+    <groupId>karaf-puzzles</groupId>
+    <version>1.0</version>
+    <relativePath>../karaf-puzzles-parent/</relativePath>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>karaf-puzzles-producer</artifactId>
+  <packaging>bundle</packaging>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>org.osgi.core</artifactId>
+    </dependency>  
+    <dependency>
+      <groupId>karaf-puzzles</groupId>
+      <artifactId>karaf-puzzles-api</artifactId>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <extensions>true</extensions>
+        <configuration>
+          <instructions>
+            <Export-Package>org.cdl._0708104.producer</Export-Package>
+            <Bundle-Activator>org.cdl._0708104.producer.ProducerActivator</Bundle-Activator>
+          </instructions>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

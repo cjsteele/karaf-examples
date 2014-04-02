@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	example parent POM
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+	<groupId>karaf-puzzles</groupId>
+  	<artifactId>karaf-puzzles-starter</artifactId>
+   	<version>1.0</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>karaf-puzzles-parent</artifactId>
+  <packaging>pom</packaging>
+  <!-- Inherited properties -->
+  <properties>
+    <aether.version>1.4.2</aether.version>
+    <blueprint.version>1.1.0</blueprint.version>
+    <felix.framework.version>4.4.0</felix.framework.version>
+    <karaf.version>3.0.0</karaf.version>
+    <logback.version>1.1.1</logback.version>
+    <osgi.core.version>5.0.0</osgi.core.version>
+  </properties>
+  
+   <dependencyManagement>
+    <dependencies>
+      <!-- OSGi dependencies -->
+      <dependency>
+        <groupId>org.osgi</groupId>
+        <artifactId>org.osgi.core</artifactId>
+        <version>${osgi.core.version}</version>
+      </dependency>
+
+	  <dependency>
+        <groupId>karaf-puzzles</groupId>
+        <artifactId>karaf-puzzles-api</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      
+      <dependency>
+        <groupId>karaf-puzzles</groupId>
+        <artifactId>karaf-puzzles-producer</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>karaf-puzzles</groupId>
+        <artifactId>karaf-puzzles-consumer</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      
+      <dependency>
+        <groupId>karaf-puzzles</groupId>
+        <artifactId>karaf-puzzles-api</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+          
+    </dependencies>
+  </dependencyManagement>
+  
+  
+</project>
