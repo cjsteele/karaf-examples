@@ -5,7 +5,8 @@ import org.cdl._0708104.api.EchoService;
 public class EchoServiceImpl implements EchoService {
 
 	@Override
-	public void echo(String s) {
-		System.out.println(s);
+	public String echo(String s) {
+		System.out.println("EchoService received "+s);
+		return s;
 	}
 }
