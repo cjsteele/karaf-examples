@@ -49,12 +49,6 @@
         <artifactId>karaf-puzzles-consumer</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
-      <dependency>
-        <groupId>karaf-puzzles</groupId>
-        <artifactId>karaf-puzzles-api</artifactId>
-        <version>${project.version}</version>
-      </dependency>
           
     </dependencies>
   </dependencyManagement>

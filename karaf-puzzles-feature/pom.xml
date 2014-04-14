@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	example feature pom
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <artifactId>karaf-puzzles-feature</artifactId>
+  <groupId>karaf-puzzles</groupId>
+  <version>1.0</version>
+  <modelVersion>4.0.0</modelVersion>
+  
+  <parent>
+    <artifactId>karaf-puzzles-parent</artifactId>
+    <groupId>karaf-puzzles</groupId>
+    <version>1.0</version>
+    <relativePath>../karaf-puzzles-parent/</relativePath>
+  </parent>
+  
+  <distributionManagement>
+    <repository>
+        <id>argus</id>
+        <name>argus-releases</name>
+        <url>http://localhost:8081/artifactory/libs-release-local</url>
+    </repository>
+  </distributionManagement>
+  <packaging>kar</packaging>
+  <dependencies>
+    <dependency>
+      <groupId>karaf-puzzles</groupId>
+      <artifactId>karaf-puzzles-api</artifactId>
+      <version>1.0</version>
+    </dependency>
+        <dependency>
+      <groupId>karaf-puzzles</groupId>
+      <artifactId>karaf-puzzles-producer</artifactId>
+      <version>1.0</version>
+    </dependency>
+        <dependency>
+      <groupId>karaf-puzzles</groupId>
+      <artifactId>karaf-puzzles-consumer</artifactId>
+      <version>1.0</version>
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.karaf.tooling</groupId>
+        <artifactId>karaf-maven-plugin</artifactId>
+        <version>3.0.0</version>
+        <extensions>true</extensions>
+          <configuration>
+            <startLevel>80</startLevel>
+            <aggregateFeatures>true</aggregateFeatures>
+          </configuration>
+        </plugin>
+    </plugins>
+  </build>
+</project>

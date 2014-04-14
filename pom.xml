@@ -12,11 +12,20 @@
   <packaging>pom</packaging>
   <version>1.0</version>
   
+  <distributionManagement>
+    <repository>
+        <id>argus</id>
+        <name>argus-releases</name>
+        <url>http://localhost:8081/artifactory/libs-release-local</url>
+    </repository>
+  </distributionManagement>
+  
   <modules>
   	<module>karaf-puzzles-parent</module>
     <module>karaf-puzzles-api</module>
     <module>karaf-puzzles-consumer</module>
     <module>karaf-puzzles-producer</module>
+    <module>karaf-puzzles-feature</module>
   </modules>
   
    <build>

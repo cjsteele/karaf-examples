@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.2.0" name="karaf-puzzles-feature">
+    <feature name="karaf-puzzles-feature" version="1.0" description="karaf-puzzles-feature">
+        <bundle start-level="80">mvn:karaf-puzzles/karaf-puzzles-api/1.0</bundle>
+        <bundle start-level="80">mvn:org.osgi/org.osgi.core/5.0.0</bundle>
+        <bundle start-level="80">mvn:karaf-puzzles/karaf-puzzles-producer/1.0</bundle>
+        <bundle start-level="80">mvn:karaf-puzzles/karaf-puzzles-consumer/1.0</bundle>
+    </feature>
+</features>

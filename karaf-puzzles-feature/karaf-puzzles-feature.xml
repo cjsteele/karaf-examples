@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
+	<feature name="karaf-puzzles-feature" version="1.0.0">
+		<bundle>mvn:org.cdl._0708104.api/karaf-puzzles-api/1.0</bundle>
+		<bundle>mvn:org.cdl._0708104.producer/karaf-puzzles-producer/1.0</bundle>
+		<bundle>mvn:org.cdl._0708104.consumer/karaf-puzzles-consumer/1.0</bundle>
+	</feature>	
+</features>
