@@ -12,13 +12,17 @@ public class EchoServiceConsumer {
 	EchoService echoService;
 	Timer timer;
 	
-	public void startConsumer(EchoService echoService) {
+	public void setEchoService(EchoService echoService) {
+		this.echoService = echoService;
+	}
+	
+	public void startConsumer() {
+		System.out.println(">>> Starting EchoServiceConsumer <<<");
 		if(echoService != null) {
-			this.echoService = echoService;
 			timer = new Timer();
 			timer.schedule(new EchoTask(), (EchoServiceConsumer.SECONDS * 1000));
 		} else {
-			throw new RuntimeException("echoService was passed to EchoServiceConsumer as null.");
+			throw new IllegalArgumentException("echoService was passed to EchoServiceConsumer as null.");
 		}
 	}
 	

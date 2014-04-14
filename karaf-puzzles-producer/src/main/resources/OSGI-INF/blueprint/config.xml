@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0">
+	<bean id="echoService"
+		class="org.cdl._0708104.producer.EchoServiceImpl"
+		init-method="startUp">
+	</bean>
+	<service ref="echoService"
+		interface="org.cdl._0708104.api.EchoService">
+	</service>
+</blueprint>
